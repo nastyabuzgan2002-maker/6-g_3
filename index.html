@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Станция 3: Обмен валют</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#eef3ff;
+    text-align:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:750px;
+    margin:auto;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.info{
+    background:#f8f9ff;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    text-align:left;
+}
+
+input{
+    width:240px;
+    padding:10px;
+    font-size:16px;
+    text-align:center;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    background:#4a6cf7;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.code{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+    color:green;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>💱 Станция 3: Обмен валют</h2>
+
+<p>Ребята, я уже в новом городе и мне нужно обменять деньги.</p>
+
+<div class="info">
+📌 Курс обмена: 1 евро = 21,2 лея<br>
+📌 Обмен: 25 евро<br>
+📌 Комиссия: 3 лея за операцию<br><br>
+
+❓ Сколько лей я получу на руки после обмена?
+</div>
+
+<input id="answer" placeholder="Введите ответ">
+
+<br>
+
+<button onclick="check()">Проверить</button>
+
+<div id="result"></div>
+<div id="code" class="code"></div>
+
+</div>
+
+<script>
+function check(){
+
+let ans = document.getElementById("answer").value.trim();
+
+
+let correct = "527";
+
+if(ans === correct){
+    document.getElementById("result").innerText = "✔ Верно!";
+    document.getElementById("code").innerText = "🔐 Код: За";
+}else{
+    document.getElementById("result").innerText = "❌ Неверно, попробуй ещё раз";
+    document.getElementById("code").innerText = "";
+}
+
+}
+</script>
+
+</body>
